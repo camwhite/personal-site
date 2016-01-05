@@ -128,12 +128,12 @@
 
 .stack {
   display: flex;
-  width: 50%;
+  width: 40%;
   margin: 10px auto;
   justify-content: space-around;
   img {
-    width: get-vw(90px);
-    height: get-vw(90px);
+    width: get-vw(50px);
+    height: get-vw(50px);
     margin: 0 5px;
   }
 }

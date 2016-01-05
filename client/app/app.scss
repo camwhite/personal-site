@@ -122,6 +122,14 @@ p, i, span, a, label, input, textarea, button {
   letter-spacing: 1px;
 }
 
+a {
+  color: $accent-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 // Component styles are injected through grunt
 // injector
 @import 'main/main.scss';
