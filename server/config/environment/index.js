@@ -32,6 +32,11 @@ var all = {
     session: 'ashe-site-secret'
   },
 
+  mailgun: {
+    apiKey: process.env.MAILGUN_KEY || 'key',
+    domain: process.env.MAILGUN_DOMAIN || 'domain',
+  },
+
   // MongoDB connection options
   mongo: {
     options: {
