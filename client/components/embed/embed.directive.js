@@ -11,7 +11,7 @@ angular.module('asheSiteApp')
       },
       link: (scope, elem, attrs) => {
         $($window).on('scroll', () => {
-          if($($window).scrollTop() > $(elem).offset().top / 2 && !$(elem).attr('src')) {
+          if($($window).scrollTop() > $(elem).offset().top - 300 && !$(elem).attr('src')) {
             $(elem).attr('src', scope.url);
           }
         })

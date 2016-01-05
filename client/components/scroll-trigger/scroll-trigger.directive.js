@@ -6,7 +6,7 @@ angular.module('asheSiteApp')
       restrict: 'A',
       link: (scope, elem, attrs) => {
         $($window).on('scroll', () => {
-          if($($window).scrollTop() > $(elem).offset().top / 2) {
+          if($($window).scrollTop() > $(elem).offset().top - $($window).height() && !$(elem).hasClass('active')) {
             elem.addClass('active');
           }
         })
