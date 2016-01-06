@@ -92,11 +92,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: get-vw(75px);
+  @include vw(75px, 33px, $tablet);
 }
 
 h2 {
-  font-size: get-vw(60px);
+  @include vw(60px, 29px, $tablet);
 }
 
 h3 {
