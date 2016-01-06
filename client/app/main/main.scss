@@ -106,9 +106,9 @@
 }
 
 .mesh .screen {
-  background: url('../../assets/images/lock-screen.png') center/cover;
+  background: url('../../assets/images/lock.png') center/cover;
   &.active {
-    background: url('../../assets/images/mesh-screen.png') center/cover;
+    background: url('../../assets/images/mesh.png') center/cover;
   }
 }
 
@@ -131,10 +131,17 @@
   width: 40%;
   margin: 10px auto;
   justify-content: space-around;
+  @media screen and ($tablet) {
+    width: 90%;
+  }
   img {
     width: get-vw(50px);
     height: get-vw(50px);
     margin: 0 5px;
+    @media screen and ($tablet) {
+      width: 60px;
+      height: 60px;
+    }
   }
 }
 
@@ -161,6 +168,7 @@
     @include randomizer(210, 70%);
     margin: 10px 0;
     padding: 10px;
+    overflow: hidden;
   }
   label, input, textarea {
     display: block;
@@ -179,7 +187,64 @@
   }
 }
 
+.name.sent {
+  animation: shrink .5s ease-out forwards;
+}
+
+.email.sent {
+  animation: shrink .5s .5s ease-out forwards;
+}
+
+.msg.sent {
+  animation: shrink .5s 1s ease-out forwards;
+}
+
+.send.sent {
+  animation: shrink .5s 1.5s ease-out forwards;
+}
+
+.thanks {
+  opacity: 0;
+  transition: all .5s 1.5s ease-in;
+  &.sent {
+    opacity: 1;
+  }
+}
+
+.quote {
+  position: relative;
+  padding: get-vw(130px) 0;
+  .wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url('../../assets/images/IMG_4110.jpg') center/cover;
+    background-attachment: fixed;
+    z-index: -1;
+    .text {
+      @include align-hack;
+      width: 90%;
+      white-space: normal;
+    }
+  }
+  h4, p {
+    color: white;
+  }
+}
+
+.copyright {
+  padding: get-vw(20px) 0;
+}
+
 @keyframes grow {
-  0% {width: 0;}
-  100% {width: 75%}
+  0% { width: 0; }
+  100% { width: 85%; }
+}
+
+@keyframes shrink {
+  0% { transform: scale(1) skew(0); }
+  90% { transform: scale(1.2) skew(20deg); }
+  100% { transform: scale(1) skew(0); }
 }

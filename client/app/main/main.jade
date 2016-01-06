@@ -100,21 +100,27 @@
         img(src="../../assets/images/SOCKETIOICON.gif")
         img(src="../../assets/images/webrtc-logo-vert-retro-255x305.png")
 
+  .quote
+    .wrapper
+      .text
+        h4 "One can't just read about getting ripped and be shredded.. You have to pump the iron, much like programming."
+        p -Me
+
   .contact
     h2 Contact Me
     img(src="../../assets/images/cam-headshot.jpg")
-    p Don't be a stranger.. I want to hear from you!
-    form(name="contact")
-      .name
+    p {{ callout }}
+    form(name="contact" ng-class="{sent: sent}")
+      .name(ng-class="{sent: sent}")
         label(for="name") Name
         input(type="text" name="name" ng-model="user.name" required)
-      .email
+      .email(ng-class="{sent: sent}")
         label(for="email") Email
         input(type="email" name="email" ng-model="user.email" required)
-      .msg
+      .msg(ng-class="{sent: sent}")
         label(for="msg") Message
         textarea(name="msg" ng-model="user.message" required)
-      .send
+      .send(ng-class="{sent: sent}")
         button(type="submit" for="contact" ng-click="send(contact)") Send
 
   .copyright
