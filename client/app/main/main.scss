@@ -138,7 +138,7 @@ d-three {
 .speakto .screen {
   background: url('../../assets/images/login-screen.png') center/cover;
   &.active {
-    background: url('../../assets/images/speakto-screen.png') center/cover;
+    background: url('../../assets/images/speakto-screen.png') center/100% 100%;
   }
 }
 
@@ -161,12 +161,31 @@ d-three {
   }
 }
 
-.iphone-6, .imac {
-  font-size: get-vw(4px);
+.css-device--mobile {
+  width: 25%;
+  height: get-vw(427px);
+  @media screen and ($mobile) {
+    width: 50%;
+    height: get-vw(927px);
+  }
 }
 
-.macbook-air {
-  font-size: get-vw(5px);
+.css-device--tablet {
+  width: 40%;
+  height: get-vw(478px);
+  @media screen and ($mobile) {
+    width: 80%;
+    height: get-vw(1024px);
+  }
+}
+
+.css-device--browser {
+  width: 95%;
+  height: get-vw(550px);
+  @media screen and ($mobile) {
+    width: 95%;
+    height: get-vw(900px);
+  }
 }
 
 .contact {
