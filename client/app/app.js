@@ -5,6 +5,7 @@ angular.module('asheSiteApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
+  'smoothScroll',
   'ui.router'
 ])
   .config(function($urlRouterProvider, $locationProvider) {

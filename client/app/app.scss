@@ -82,6 +82,7 @@ $mobile: "max-width: 640px";
 body {
   font-family: 'Raleway';
   background: $primary-color;
+  overflow-x: hidden;
   z-index: 1;
 }
 
