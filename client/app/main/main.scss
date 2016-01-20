@@ -129,9 +129,9 @@ d-three {
 }
 
 .pirate .screen {
-  background: url('../../assets/images/login-screen.png') center/cover;
+  background: url('../../assets/images/ipad-lock.jpg') center/100% 100%;
   &.active {
-    background: url('../../assets/images/pirate-screen.png') center/cover;
+    background: url('../../assets/images/pirate-screen.png') center/100% 100%;
   }
 }
 
