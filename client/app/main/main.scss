@@ -136,9 +136,9 @@ d-three {
 }
 
 .speakto .screen {
-  background: url('../../assets/images/login-screen.png') center/cover;
-  &.active {
-    background: url('../../assets/images/speakto-screen.png') center/100% 100%;
+  video {
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -180,8 +180,8 @@ d-three {
 }
 
 .css-device--browser {
-  width: 95%;
-  height: get-vw(550px);
+  width: 90%;
+  height: get-vw(525px);
   @media screen and ($mobile) {
     width: 95%;
     height: get-vw(900px);
