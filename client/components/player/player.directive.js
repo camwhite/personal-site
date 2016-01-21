@@ -3,7 +3,7 @@
 angular.module('asheSiteApp')
   .directive('player', ($window) => {
     return {
-      template: '<video src="/assets/videos/speakto.mp4" loop></video>',
+      template: '<video src="/assets/images/speakto.mp4" preload loop></video>',
       restrict: 'E',
       replace: true,
       link: (scope, elem, attrs) => {
